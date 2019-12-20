@@ -7,7 +7,7 @@ class InteractiveRecord
     self.to_s.downcase.pluralize
   end
 
-  def self.column_names
+  def self.column_names #returns an array of SQL column names
     DB[:conn].results_as_hash = true
 
     sql = "PRAGMA table_info('#{table_name}')"
