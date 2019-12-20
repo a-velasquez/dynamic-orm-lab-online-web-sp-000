@@ -3,7 +3,7 @@ require 'active_support/inflector'
 
 class InteractiveRecord
 
-  def self.table_name
+  def self.table_name #creates a downcased, plural table name based on the Class name 
     self.to_s.downcase.pluralize
   end
 
